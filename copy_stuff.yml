@@ -1,0 +1,12 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+
+  - name: Copy from Local to Remote Target Machine with 'copy'
+    copy:
+      src: inventory
+      dest: /home/jason/target
+      backup: yes

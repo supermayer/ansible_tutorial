@@ -1,0 +1,20 @@
+---
+
+- hosts: all
+  become: False
+  vars:
+    text_line: ""
+  tasks:
+
+
+  - name: Insert some text into a file
+    blockinfile:
+      path: /home/jason/target/testfile.cfg
+      backup: yes
+      block: |
+        {{ text_line }}
+        test line 5
+  - name: add line
+    lineinfile:
+      path: /home/jason/target/testfile.cfg
+      line: i added this {{ text_line }}

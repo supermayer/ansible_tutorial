@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: False
+  tasks:
+
+
+  - name:  copy on remote host
+    copy:
+      src: /home/jason/target
+      dest: /home/jason/target/
+      remote_src: yes
+  
