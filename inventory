@@ -1,2 +1,7 @@
 ubuntu-docker
+prometheus
+exporters
+grafana
+localhost ansible_connection=local
+rog-fedora
 

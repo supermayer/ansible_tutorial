@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update repository index
+    package:
+      name: "*"
+      state: latest
+   
